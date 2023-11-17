@@ -22,5 +22,30 @@
             public string? objetivos_string { get; set; }
 
         }
+
+        public class Aprobados_egel
+        {
+            public int id_carrera { get; set; }
+            public string? generacion { get; set; }
+            public int alumnos_egresados { get; set; }
+            public int alumnos_examen { get; set; }
+            public int alumnos_aprobados { get; }
+        }
+
+        public class docentes
+        {
+            public int id_carrera { get; set; }
+            public int tiempo_completo { get; set; }
+            public int tres_cuartos { get; set; }
+            public int medio_tiempo { get; set; }
+            public int por_asignatura { get; set; }
+            public int tecnico_universitario { get; set; }
+            public int profesional_asociado { get; set; }
+            public int licenciatura { get; set; }
+            public int especialidad { get; set; }
+            public int maestria { get; set; }
+            public int doctorado { get; set; }
+
+        }
     }
 }
