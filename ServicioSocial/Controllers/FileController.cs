@@ -6,12 +6,14 @@ using MySql.Data.MySqlClient;
 using static System.Net.Mime.MediaTypeNames;
 using Microsoft.AspNetCore.Cors;
 using ServicioSocial.Clases;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ServicioSocial.Controllers
 {
 
     [ApiController]
     [Route("[controller]")]
+    [Authorize]
 
     public class FileController : ControllerBase
     {

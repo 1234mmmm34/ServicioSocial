@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using MySql.Data.MySqlClient;
 using ServicioSocial.Clases;
@@ -7,6 +8,7 @@ namespace ServicioSocial.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class CumplimientoController : ControllerBase
     {
         public static string cadena_conexion = Global.cadena_conexion;
