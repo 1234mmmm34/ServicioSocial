@@ -27,7 +27,7 @@ namespace ServicioSocial.Controllers
             using (MySqlConnection conexion = new MySqlConnection(cadena_conexion))
             {
                 int rowsaffected = 0;
-                MySqlCommand comando = new MySqlCommand("insert into pregunta (id_carrera, eje, categoria, indicador, nombre) VALUES (@id_carrera, @eje, @categoria, @indicador, @nombre)", conexion);
+                MySqlCommand comando = new MySqlCommand("insert into pregunta (id_carrera, eje, categoria, indicador, nombre, valuacion) VALUES (@id_carrera, @eje, @categoria, @indicador, @nombre, @valuacion)", conexion);
 
                 //@id_usuario, @Tipo_deuda,@Nombre_deuda, @Monto, @Ruta_comprobante, @Estado
 
@@ -36,6 +36,7 @@ namespace ServicioSocial.Controllers
                 comando.Parameters.Add("@categoria", MySqlDbType.Int32).Value = request.categoria;
                 comando.Parameters.Add("@indicador", MySqlDbType.Int32).Value = request.indicador;
                 comando.Parameters.Add("@nombre", MySqlDbType.VarChar).Value = request.nombre;
+                comando.Parameters.Add("@valuacion", MySqlDbType.VarChar).Value = request.valuacion;
                 //  comando.Parameters.Add("@fecha", MySqlDbType.Date).Value = fecha;
 
 
@@ -120,7 +121,7 @@ namespace ServicioSocial.Controllers
             {
                 int rowsaffected = 0;
                 MySqlCommand comando = new MySqlCommand("UPDATE pregunta " +
-                    "SET eje=@eje, categoria=@categoria, indicador=@indicador, nombre=@nombre" +
+                    "SET eje=@eje, categoria=@categoria, indicador=@indicador, nombre=@nombre, valuacion = @valuacion" +
                     "WHERE id_pregunta=@id_pregunta && id_carrera=@id_carrera", conexion);
 
                 comando.Parameters.Add("@eje", MySqlDbType.Int32).Value = request.eje;
@@ -128,7 +129,7 @@ namespace ServicioSocial.Controllers
                 comando.Parameters.Add("@indicador", MySqlDbType.Int32).Value = request.indicador;
                 comando.Parameters.Add("@nombre", MySqlDbType.VarChar).Value = request.nombre;
                 comando.Parameters.Add("@id_pregunta", MySqlDbType.Int32).Value = request.id_pregunta;
-                comando.Parameters.Add("@id_carrera", MySqlDbType.Int32).Value = request.id_carrera;
+                comando.Parameters.Add("@valuacion", MySqlDbType.VarChar).Value = request.valuacion;
 
 
 
@@ -183,7 +184,7 @@ namespace ServicioSocial.Controllers
                     while (reader.Read())
                     {
                         Pregunta.Add(new Pregunta() { id_pregunta = reader.GetInt32(0), eje = reader.GetInt32(1), categoria = reader.GetInt32(2), 
-                                                      indicador = reader.GetInt32(3), nombre = reader.GetString(4) });
+                                                      indicador = reader.GetInt32(3), nombre = reader.GetString(4), valuacion = reader.GetString(5) });
                     }
 
 

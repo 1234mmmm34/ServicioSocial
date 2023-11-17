@@ -23,15 +23,18 @@
 
         }
 
-        public class Aprobados_egel
+        public class Programa_academico
         {
             public int id_carrera { get; set; }
-            public string? generacion { get; set; }
-            public int alumnos_egresados { get; set; }
-            public int alumnos_examen { get; set; }
-            public int alumnos_aprobados { get; }
-        }
+            public string? nombre { get; set; }
+            public string? documento_creacion { get; set; }
+            public string? numero_rvoe { get; set; }
+            public string? institucion_rvoe { get; set; }
+            public string? mision { get; set; }
+            public string? vision { get; set; }
+            public string? objetivos_estrategicos { get; set; }
 
+        }
         public class Docentes
         {
             public int id_carrera { get; set; }
@@ -48,6 +51,15 @@
 
         }
 
+        public class Aprobados_egel
+        {
+            public int id_carrera { get; set; }
+            public string? generacion { get; set; }
+            public int alumnos_egresados { get; set; }
+            public int alumnos_examen { get; set; }
+            public int alumnos_aprobados { get; }
+        }
+
         public class Matricula
         {
             public int id_carrera { get; set; }
@@ -56,19 +68,6 @@
             public int mujer_nuevo { get; set; }
             public int hombre_reingreso { get; set; }
             public int mujer_reingreso { get; set; }
-
-        }
-
-        public class Programa_academico
-        {
-            public int id_carrera { get; set; }
-            public string? nombre { get; set; }
-            public string? documento_creacion { get; set; }
-            public string? numero_rvoe { get; set; }
-            public string? institucion_rvoe { get; set; }
-            public string? mision { get; set; }
-            public string? vision { get; set; }
-            public string? objetivos_estrategicos { get; set; }
 
         }
 

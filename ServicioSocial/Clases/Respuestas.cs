@@ -17,6 +17,7 @@ namespace ServicioSocial.Clases
         public int categoria { get; set; }
         public int indicador { get; set; }
         public string? nombre { get; set; }
+        public string? valuacion { get; set; }
 
 
     }
