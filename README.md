@@ -5,3 +5,5 @@ Aquí viene el código, es un código el cuál se supone ustedes ya tienen.
 Si tienen alguna duda de cuáles son los datos que agarra cada método, principalmente los de consulta, en la parte de
 los select pueden ver qué datos son los que les están pidiendo.
 
+Y si tienen alguna otra duda, me la pueden consultar a mí antes de andar de hocicon con gente a la que le vales verga, pendejo.
+
